@@ -50,7 +50,7 @@ body {
     position: fixed;
     top: 10px; /* Ajuste para distância do topo */
     right: 10px; /* Ajuste para distância da direita */
-    max-width: 150px; /* Ajuste o tamanho máximo conforme desejado */
+    max-width: 200px; /* Ajuste o tamanho máximo conforme desejado */
 }
 
 .apresentacao__links__links {
