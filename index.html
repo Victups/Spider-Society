@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIDER-Society</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       #gif-portal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+#gif-portal .gif__portal__tela_cheia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#gif-portal video {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    </style>
+</head>
+<body>
+    <header></header>
+
+    <main id="gif-portal">
+        <div class="gif__portal__tela_cheia">
+            <video id="gif-portal-video" autoplay muted>
+                <source src="movie/gifPortal.webm" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <main class="gif__spider__canto__superior__direito"> 
+        <div class="gif__spider">
+            <video autoplay muted loop> 
+                <source src="img/gifSpider.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <main class="aranha__teia__lado_texto">
+        <div class="aranha__teia">
+            <img src="img/aranhaNa.png" alt="imagem de uma aranha usando sua teia">
+        </div>
+    </main>
+    
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo"><strong class="titulo-destaque">Olá</strong> Spider!</h1>
+            <h2>Bem vindo a Spider Society</h2> 
+            <p class="apresentacao__conteudo__texto">A Spider-Society é uma organização de pessoas-aranha de diferentes dimensões alternativas, 
+                com a missão de preservar o multiverso de quaisquer ameaças. A sociedade foi fundada e liderada por Miguel O'Hara, 
+                o Homem-Aranha de um universo alternativo que se passa no futuro.
+            </p>
+            <div class="apresentacao__links">
+                <a class="apresentacao__links__links" href="https://www.instagram.com/spiderversemovie" onclick="mostrarGifPortal(event)">Inscreva-se</a>
+                <a class="apresentacao__links__spotify" href="https://open.spotify.com/playlist/4eOC07CvaoHMKQJ6EDaPlw?si=db6265e8a91449f0" onclick="mostrarGifPortal(event)">Spotify</a>
+            </div>
+        </section>
+        <img src="img/logoMiles.png" alt="Imagem da logo spider"> 
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function mostrarGifPortal(event) {
+            event.preventDefault();
+            const gifPortal = document.getElementById('gif-portal');
+            const gifPortalVideo = document.getElementById('gif-portal-video');
+
+            // Oculta outros elementos
+            document.querySelector('.gif__spider__canto__superior__direito').style.display = 'none';
+            document.querySelector('.aranha__teia__lado_texto').style.display = 'none';
+            document.querySelector('.apresentacao').style.display = 'none';
+            
+            gifPortal.style.display = 'flex';
+            gifPortalVideo.play();
+            
+            // Ajusta o tempo de reprodução para 3 segundos (3000 milissegundos)
+            const tempoReproducao = 2200;
+            setTimeout(() => {
+                gifPortalVideo.pause();
+                window.location.href = event.target.href;
+            }, tempoReproducao);
+        }
+    </script>
+</body>
+</html>
