@@ -7,10 +7,30 @@
 }
 
 body {
-    height: 100vh;
     box-sizing: border-box;
     background-color: black;
     color: red;
+}
+
+.cabecalho {
+    padding: 2% 10%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__links {
+    color: #7f00f5;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cabecalho__menu__links:hover {
+    color: #ff4500;
 }
 
 .titulo-destaque {
@@ -18,17 +38,18 @@ body {
 }
 
 .apresentacao {
+    padding: 8%;
     margin: 10% 15%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 .apresentacao__conteudo {
     width: 615px;
     display: flex;
     flex-direction: column;
-    gap: 40PX;
+    gap: 40px;
 }
 
 .apresentacao__conteudo__titulo {
@@ -43,22 +64,41 @@ body {
 
 .apresentacao__links {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.aranha__teia__lado_texto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 .gif__spider {
     position: fixed;
-    top: 10px; /* Ajuste para distância do topo */
-    right: 10px; /* Ajuste para distância da direita */
-    max-width: 350px; /* Ajuste o tamanho máximo conforme desejado */
+    top: 10px;
+    right: 10px;
+    max-width: 150px;
+}
+
+.apresentacao__links_subtitulo {
+    font-family: 'inconsolata', 'monospace';
+    color: #4e0196;
+    font-size: 32px;
+}
+
+.subtitulo_titulo_destaque {
+    color: rgb(197, 0, 181);
 }
 
 .apresentacao__links__links {
-    color: white;
-    background-color: #4e0196;
-    width: 280px;
+    color: rgb(235, 235, 235);
+    border: 2px solid #8b0000;
+    width: 378px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
     font-size: 24px;
     font-weight: 600;
     padding: 8px 0;
@@ -66,18 +106,60 @@ body {
     font-family: 'Righteous', sans-serif;
 }
 
-.gif__spider video {
-    max-width: 100%; /* Garante que o vídeo não ultrapasse o tamanho máximo definido para .gif__spider */
+.apresentacao__links__links:hover {
+    background-color: #011d46;
 }
+
 .apresentacao__links__spotify {
     color: white;
-    background-color: rgb(2, 120, 128);
-    width: 280px;
+    border: #8b0000 solid;
+    width: 378px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
     font-size: 24px;
     font-weight: 600;
     padding: 8px 0;
     text-decoration: none;
     font-family: 'Righteous', sans-serif;
+}
+
+.apresentacao__links__spotify:hover {
+    background-color: #011d46;
+}
+
+.rodape {
+    padding: 15px;
+    color: palevioletred;
+    background-color: #4e0196;
+    text-align: center;
+    font-family: 'Righteous', sans-serif;
+}
+
+/* Mídia Query para Dispositivos Pequenos (ex: Smartphones) */
+@media only screen and (max-width: 600px) {
+    .cabecalho {
+        padding: 2% 5%;
+    }
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    .apresentacao {
+        padding: 5%;
+        margin: 5%;
+    }
+    .apresentacao__conteudo {
+        width: 100%;
+    }
+}
+
+/* Mídia Query para Dispositivos Médios (ex: Tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adicione as regras necessárias aqui */
+}
+
+/* Mídia Query para Dispositivos Grandes (ex: Desktops) */
+@media only screen and (min-width: 1025px) {
+    /* Adicione as regras necessárias aqui */
 }
