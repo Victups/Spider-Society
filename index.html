@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPIDER-SOCIETY</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SPIDER-Society</title>
+    <link rel="stylesheet" href="./estilos/style.css">
     <style>
        #gif-portal {
     position: fixed;
@@ -35,7 +35,12 @@
     </style>
 </head>
 <body>
-    <header></header>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__links" href="index.html">Página Inicial</a>
+            <a class="cabecalho__menu__links" href="univeroOne.html">Universo One</a>
+        </nav>
+    </header>
 
     <main id="gif-portal">
         <div class="gif__portal__tela_cheia">
@@ -61,33 +66,35 @@
     
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo"><strong class="titulo-destaque">Olá</strong>, Spider!</h1>
+            <h1 class="apresentacao__conteudo__titulo"><strong class="titulo-destaque">Olá</strong> Spider!</h1>
             <h2>Bem vindo a Spider Society</h2> 
             <p class="apresentacao__conteudo__texto">A Spider-Society é uma organização de pessoas-aranha de diferentes dimensões alternativas, 
                 com a missão de preservar o multiverso de quaisquer ameaças. A sociedade foi fundada e liderada por Miguel O'Hara, 
                 o Homem-Aranha de um universo alternativo que se passa no futuro.
             </p>
             <div class="apresentacao__links">
+                <h3 class="apresentacao__links_subtitulo"><strong class="subtitulo_titulo_destaque">Escolha seu Universo</strong></h3>
                 <a class="apresentacao__links__links" href="https://www.instagram.com/spiderversemovie" onclick="mostrarGifPortal(event)">Inscreva-se</a>
-                <a class="apresentacao__links__spotify" href="https://open.spotify.com/playlist/4eOC07CvaoHMKQJ6EDaPlw?si=db6265e8a91449f0" onclick="mostrarGifPortal(event)">Presente☆</a>
+                <a class="apresentacao__links__spotify" href="https://open.spotify.com/playlist/4eOC07CvaoHMKQJ6EDaPlw?si=db6265e8a91449f0" onclick="mostrarGifPortal(event)">  
+                    Presente</a>
             </div>
         </section>
         <img src="img/logoMiles.png" alt="Imagem da logo spider"> 
     </main>
 
-    <footer></footer>
-
+    
     <script>
         function mostrarGifPortal(event) {
             event.preventDefault();
             const gifPortal = document.getElementById('gif-portal');
             const gifPortalVideo = document.getElementById('gif-portal-video');
-
+    
             // Oculta outros elementos
             document.querySelector('.gif__spider__canto__superior__direito').style.display = 'none';
             document.querySelector('.aranha__teia__lado_texto').style.display = 'none';
             document.querySelector('.apresentacao').style.display = 'none';
-            
+            document.querySelector('.rodape').style.display = 'none'; // Oculta o rodapé
+    
             gifPortal.style.display = 'flex';
             gifPortalVideo.play();
             
@@ -99,5 +106,11 @@
             }, tempoReproducao);
         }
     </script>
+    
+
+<footer class="rodape">
+    <p>Vetor</p>    
+</footer>
+
 </body>
 </html>
