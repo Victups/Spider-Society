@@ -12,41 +12,42 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
-.cabecalho{
-    padding:2% 1% 1% 15%;
-
+.cabecalho {
+    padding: 2% 1% 1% 15%;
 }
-.cabecalho__menu{
-    display:flex ;
-    gap:80px;
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
 }
-.cabecalho__menu__links{
-    color:#7f00f5;
+
+.cabecalho__menu__links {
+    color: #7f00f5;
     font-family: sans-serif;
-    font-size: 17px; 
+    font-size: 1.01rem;
     font-weight: 600;
     text-decoration: none;
 }
+
 .cabecalho__menu__links:hover {
     color: #ff4500;
 }
 
-.apresentacao {
+.apresentacao { 
+    width: 50%;
     position: flex;
     text-align: center;
     z-index: 2;
 }
 
 .apresentacao__conteudo {
-    padding: 20px;
     position: absolute;
     top: 40%;
     left: 30%;
     transform: translate(-50%, -50%);
     width: 50%;
     text-align: left;
-    font-size: 40px;
+    font-size: 2.5rem;
     z-index: 2;
     margin-right: 20px;
 }
@@ -67,16 +68,16 @@ body {
     display: block;
     z-index: 1;
 }
-
 .degrade-sobreposto {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.973), transparent);
     z-index: 2;
 }
+
 
 .apresentacao__apresentacao {
     display: flex;
@@ -90,12 +91,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 30px; /* Adicione a margem desejada aqui */
-    z-index: 3;
+    margin-top: 30px;
 }
 
 .bloco {
-    width: 35%; /* Ajustado para ocupar 30% da largura disponível */
+    width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,17 +103,27 @@ body {
 }
 
 .bloco__img-cn img {
-    width: 65%; /* Ajustado para ocupar 100% da largura do bloco */
-    height: auto; /* Ajustado para manter a proporção original */
+    width: 65%;
+    height: auto;
     box-shadow: 0 0 0 15px rgb(128, 115, 115);
 }
 
-.bloco__sinopse {
+.bloco__bloco__sinopse{
     width: 30%;
+
 }
 
-.sinopse__texto {
-    font-family: "acumin-pro", sans-serif;
+.sinopse__texto h2,
+.bloco__creditos h3 {
+    margin-bottom: 10px; /* Adicione o valor desejado para o espaçamento */
+    font-size: 1.6rem;
+}
+.texto__texto__sinopse{
+    font-size: 1.3rem
+}
+
+.bloco__bloco__sinopse {
+    width: 30%;
 }
 
 .bloco__creditos {
@@ -121,36 +131,71 @@ body {
     flex-direction: column;
     align-items: flex-start;
     width: 10%;
+    font-size: 1rem;
 }
 
 .creditos__item {
-    margin-bottom: 1em; /* Adicione o espaçamento desejado entre os itens de créditos */
+    margin-bottom: 1em;
 }
 
 .creditos__item h4 {
-    text-transform: uppercase; /* Torna os títulos dos créditos em maiúsculas */
-    font-weight: bold; /* Adiciona negrito para destaque */
+    text-transform: uppercase;
+    font-weight: bold;
 }
-
-@media screen and (max-width: 600px) {
-    .apresentacao__conteudo {
-        font-size: 6vw; /* Ajuste o tamanho da fonte para dispositivos pequenos */
+@media (max-width: 1200px) {
+    .cabecalho{
+        padding: 10%;
+        
     }
+    .cabecalho__menu{
+        justify-content: center;
+        
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+    
+    .apresentacao__conteudo {
+            top: 25%;
+            left: 30%;
+        }
+    .apresentacao__creditos{
+            font-size: 0.7rem;
+        }
 
     .blocos {
-        flex-direction: column; /* Mude para uma disposição de coluna em dispositivos pequenos */
+        flex-direction: auto;
         align-items: center;
+        margin-right: 12%;                      
     }
 
     .bloco {
-        width: 80%; /* Largura maior para melhorar a legibilidade em dispositivos pequenos */
+        width: 50%;
+        font-size: 1rem;
+
     }
+
+    .sinopse__texto {
+        font-size: 1.1rem; /* Ajuste o tamanho desejado para telas menores */
+    }
+    .bloco__creditos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 5%;
+        font-size: 0.8rem;
+        margin-right: 0%; 
+        
 }
 
-.rodape{
+}
+
+
+.rodape {
     padding: 15px;
     color: palevioletred;
     background-color: #4e0196;
     text-align: center;
-    font-family: 'Righteous', sans-serif;    
+    font-family: 'Righteous', sans-serif;
+    font-size: 1rem;
 }

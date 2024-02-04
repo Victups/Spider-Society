@@ -23,7 +23,7 @@ body {
 .cabecalho__menu__links{
     color:#7f00f5;
     font-family: sans-serif;
-    font-size: 17px; 
+    font-size: 1.01rem; 
     font-weight: 600;
     text-decoration: none;
 }
@@ -41,26 +41,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40PX;
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.1rem;
     font-family: 'Righteous', sans-serif;
 }
 
 .apresentacao__conteudo__texto {
-    font-size: 28px;
+    font-size: 1.8rem;
     font-family: 'Inconsolata', monospace;
 }
-
-.apresentacao__links {
+.logo__miles{
+    width: 45%;
+}
+.apresentacao__links { 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,9 +71,10 @@ body {
     gap: 32px;
 }
 .aranha__teia__lado_texto{
-    position: absolute;
-    top: 15px;;
-    left: 15px;
+    position: flex;
+    width:30%;
+    top: 5px;;
+    left: 25px;
 }
 .gif__spider {
     position: fixed;
@@ -82,7 +86,7 @@ body {
 .apresentacao__links_subtitulo {
     font-family: 'inconsolata', 'monospace';
     color: #4e0196;
-    font-size: 32px;
+    font-size: 2rem;
 }
 .subtitulo_titulo_destaque { 
     color: rgb(197, 0, 181) ;
@@ -92,10 +96,10 @@ body {
     color: rgb(235, 235, 235);
     border: 2px solid #8b0000;
     /*background-color: #4e0196;*/
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 8px 0;
     text-decoration: none;
@@ -112,10 +116,10 @@ body {
     color: white;
     border: #8b0000 solid;
     /*background-color: rgb(2, 120, 128);*/
-    width: 378px;
+    width: 50%;
     text-align: center;                                  
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 8px 0;
     text-decoration: none;
@@ -133,8 +137,25 @@ body {
     color: palevioletred;
     background-color: #4e0196;
     text-align: center;
-    font-family: 'Righteous', sans-serif;    
+    font-family: 'Righteous', sans-serif;
+    font-size: 1rem;    
 }
-
-
-
+@media(max-width: 1200px) {
+    
+    
+    .cabecalho{
+        padding: 10%;
+        
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    }
+   
