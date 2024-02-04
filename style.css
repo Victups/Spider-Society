@@ -18,7 +18,7 @@
     }
     .cabecalho__menu{
         display:flex ;
-        gap:80px;
+        gap: 80px;
     }
     .cabecalho__menu__links{
         color:#7f00f5;
@@ -141,55 +141,67 @@
         font-size: 1rem;    
     }
     @media(max-width: 430px) {
-        .gif__spider {
-            position: relative;
-            top: 10px;
-            left: 10px;
-            max-width: 50rem;
-            z-index: 2;
+        body {
+            overflow-x: hidden;
+            margin: 0;
         }
-
-        .aranha__teia__lado_texto {
-            display: none;
-        }
-        .logo__miles{
-           display: none;
-        }
-
-        
-        .cabecalho{
+    
+        .cabecalho {
             padding: 10%;
             z-index: 1;
-            
         }
-        .cabecalho__menu{
+    
+        .cabecalho__menu {
             justify-content: center;
         }
-        .apresentacao{
+    
+        .apresentacao {
             flex-direction: column-reverse;
             padding: 5%;
         }
-        .apresentacao__conteudo{
-            width: auto;
+    
+        .apresentacao__conteudo {
+            width: 100%;
         }
-        .apresentacao__links_subtitulo{
+    
+        .apresentacao__conteudo__titulo {
+            font-size: 1.8rem; /* Reduz a fonte do título */
+        }
+    
+        .apresentacao__conteudo__texto {
+            font-size: 1.4rem; /* Reduz a fonte do texto */
+        }
+    
+        .apresentacao__links_subtitulo {
             font-size: 1.4rem;
         }
-        .apresentacao__links__links{
+    
+        .apresentacao__links__links,
+        .apresentacao__links__spotify {
             font-size: 1.2rem;
         }
-        .apresentacao__links__spotify{
-            font-size: 1.2rem;
-
+    
+        .gif__spider {
+            position: relative;
+            top: 0;
+            left: 0;
+            max-width: 100%; /* Ocupa toda a largura da viewport */
+            z-index: 2;
         }
-    .rodape {
-        margin-left: -10%; /* Ajuste o valor conforme necessário para alinhar com a borda */
-        margin-right: -10%;
-        padding: 15px;
-        color: palevioletred;
-        background-color: #4e0196;
-        text-align: center;
-        font-family: 'Righteous', sans-serif;
-        font-size: 1rem;
+    
+        .aranha__teia__lado_texto,
+        .logo__miles {
+            display: none;
+        }
+    
+        .rodape {
+            margin: 0;
+            padding: 15px;
+            color: palevioletred;
+            background-color: #4e0196;
+            text-align: center;
+            font-family: 'Righteous', sans-serif;
+            font-size: 1rem;
+        }
     }
-}
+    
