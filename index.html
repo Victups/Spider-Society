@@ -84,27 +84,29 @@
 
     
     <script>
-        function mostrarGifPortal(event) {
-            event.preventDefault();
-            const gifPortal = document.getElementById('gif-portal');
-            const gifPortalVideo = document.getElementById('gif-portal-video');
+       function mostrarGifPortal(event) {
+    event.preventDefault();
+    const gifPortal = document.getElementById('gif-portal');
+    const gifPortalVideo = document.getElementById('gif-portal-video');
+
+    // Oculta outros elementos
+    document.querySelector('.gif__spider__canto__superior__direito').style.display = 'none';
+    document.querySelector('.aranha__teia__lado_texto').style.display = 'none';
+    document.querySelector('.apresentacao').style.display = 'none';
+    document.querySelector('.rodape').style.display = 'none'; // Oculta o rodapé
+    document.querySelector('.cabecalho').style.display = 'none'; // Oculta o cabeçalho
+
+    gifPortal.style.display = 'flex';
+    gifPortalVideo.play();
     
-            // Oculta outros elementos
-            document.querySelector('.gif__spider__canto__superior__direito').style.display = 'none';
-            document.querySelector('.aranha__teia__lado_texto').style.display = 'none';
-            document.querySelector('.apresentacao').style.display = 'none';
-            document.querySelector('.rodape').style.display = 'none'; // Oculta o rodapé
-    
-            gifPortal.style.display = 'flex';
-            gifPortalVideo.play();
-            
-            // Ajusta o tempo de reprodução para 3 segundos (3000 milissegundos)
-            const tempoReproducao = 2200;
-            setTimeout(() => {
-                gifPortalVideo.pause();
-                window.location.href = event.target.href;
-            }, tempoReproducao);
-        }
+    // Ajusta o tempo de reprodução para 3 segundos (3000 milissegundos)
+    const tempoReproducao = 2200;
+    setTimeout(() => {
+        gifPortalVideo.pause();
+        window.location.href = event.target.href;
+    }, tempoReproducao);
+}
+
     </script>
     
 
