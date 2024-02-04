@@ -1,165 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sixtyfour&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Righteous&family=Sixtyfour&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sixtyfour&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Righteous&family=Sixtyfour&display=swap');
 
-* {
-    margin: 0%;
-    padding: 0%;
-}
-
-body {
-    box-sizing: border-box;
-    background-color: black;
-    color: red;
-}
-
-.cabecalho {
-    padding: 2% 10%;
-}
-
-.cabecalho__menu {
-    display: flex;
-    gap: 80px;
-}
-
-.cabecalho__menu__links {
-    color: #7f00f5;
-    font-family: sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.cabecalho__menu__links:hover {
-    color: #ff4500;
-}
-
-.titulo-destaque {
-    color: #7f00f5;
-}
-
-.apresentacao {
-    padding: 8%;
-    margin: 10% 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.apresentacao__conteudo {
-    width: 615px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.apresentacao__conteudo__titulo {
-    font-size: 36px;
-    font-family: 'Righteous', sans-serif;
-}
-
-.apresentacao__conteudo__texto {
-    font-size: 28px;
-    font-family: 'Inconsolata', monospace;
-}
-
-.apresentacao__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-}
-
-.aranha__teia__lado_texto {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-}
-
-.gif__spider {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    max-width: 150px;
-}
-
-.apresentacao__links_subtitulo {
-    font-family: 'inconsolata', 'monospace';
-    color: #4e0196;
-    font-size: 32px;
-}
-
-.subtitulo_titulo_destaque {
-    color: rgb(197, 0, 181);
-}
-
-.apresentacao__links__links {
-    color: rgb(235, 235, 235);
-    border: 2px solid #8b0000;
-    width: 378px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 8px 0;
-    text-decoration: none;
-    font-family: 'Righteous', sans-serif;
-}
-
-.apresentacao__links__links:hover {
-    background-color: #011d46;
-}
-
-.apresentacao__links__spotify {
-    color: white;
-    border: #8b0000 solid;
-    width: 378px;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 24px;
-    font-weight: 600;
-    padding: 8px 0;
-    text-decoration: none;
-    font-family: 'Righteous', sans-serif;
-}
-
-.apresentacao__links__spotify:hover {
-    background-color: #011d46;
-}
-
-.rodape {
-    padding: 15px;
-    color: palevioletred;
-    background-color: #4e0196;
-    text-align: center;
-    font-family: 'Righteous', sans-serif;
-}
-
-/* Mídia Query para Dispositivos Pequenos (ex: Smartphones) */
-@media only screen and (max-width: 600px) {
-    .cabecalho {
-        padding: 2% 5%;
+    * {
+        margin: 0%;
+        padding: 0%;
     }
-    .cabecalho__menu {
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px;
+
+    body {
+        /* height: 100vh; */
+        box-sizing: border-box;
+        background-color: black;
+        color: red;
     }
+
+    .cabecalho{
+        padding:2% 0% 0% 22%;
+    }
+    .cabecalho__menu{
+        display:flex ;
+        gap:80px;
+    }
+    .cabecalho__menu__links{
+        color:#7f00f5;
+        font-family: sans-serif;
+        font-size: 1.01rem; 
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .cabecalho__menu__links:hover {
+        color: #ff4500;
+    }
+
+    .titulo-destaque {
+        color: #7f00f5;
+    }
+
     .apresentacao {
-        padding: 5%;
-        margin: 5%;
+        padding: 8%;
+        margin: 10% 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 82px;
     }
+
     .apresentacao__conteudo {
-        width: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 40PX;
     }
-}
 
-/* Mídia Query para Dispositivos Médios (ex: Tablets) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Adicione as regras necessárias aqui */
-}
+    .apresentacao__conteudo__titulo {
+        font-size: 2.1rem;
+        font-family: 'Righteous', sans-serif;
+    }
 
-/* Mídia Query para Dispositivos Grandes (ex: Desktops) */
-@media only screen and (min-width: 1025px) {
-    /* Adicione as regras necessárias aqui */
+    .apresentacao__conteudo__texto {
+        font-size: 1.8rem;
+        font-family: 'Inconsolata', monospace;
+    }
+    .logo__miles{
+        width: 45%;
+    }
+    .apresentacao__links { 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+    .aranha__teia__lado_texto{
+        position: flex;
+        width:30%;
+        top: 5px;;
+        left: 25px;
+    }
+    .gif__spider {
+        position: fixed;
+        top: 10px; /* Ajuste para distância do topo */
+        right: 10px; /* Ajuste para distância da direita */
+        max-width: 150px; /* Ajuste o tamanho máximo conforme desejado */
+    }
+
+    .apresentacao__links_subtitulo {
+        font-family: 'inconsolata', 'monospace';
+        color: #3e0b6ece;
+        font-size: 2rem;
+    }
+    .subtitulo_titulo_destaque { 
+        color: rgb(197, 0, 181) ;
+    }
+
+    .apresentacao__links__links {
+        color: rgb(235, 235, 235);
+        border: 2px solid #8b0000;
+        /*background-color: #4e0196;*/
+        width: 50%;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 8px 0;
+        text-decoration: none;
+        font-family: 'Righteous', sans-serif;                                                 
+    }
+    /*.proporcao__teia__botao{
+        /*width: 50px; /* Ajuste o valor conforme necessário */
+        /*height: auto; /* Mantém a proporção da imagem */
+
+    .gif__spider video {
+        max-width: 100%; /* Garante que o vídeo não ultrapasse o tamanho máximo definido para .gif__spider */
+    }
+    .apresentacao__links__spotify {
+        color: white;
+        border: #8b0000 solid;
+        /*background-color: rgb(2, 120, 128);*/
+        width: 50%;
+        text-align: center;                                  
+        border-radius: 8px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 8px 0;
+        text-decoration: none;
+        font-family: 'Righteous', sans-serif;
+    }
+
+    .apresentacao__links__spotify:hover {
+    background-color: #011d46;
+    }
+    .apresentacao__links__links:hover {
+        background-color: #011d46;
+    }
+    .rodape{
+        padding: 15px;
+        color: palevioletred;
+        background-color: #4e0196;
+        text-align: center;
+        font-family: 'Righteous', sans-serif;
+        font-size: 1rem;    
+    }
+    @media(max-width: 430px) {
+        .gif__spider {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            max-width: 50rem;
+            z-index: 2;
+        }
+
+        .aranha__teia__lado_texto {
+            display: none;
+        }
+        .logo__miles{
+           display: none;
+        }
+
+        
+        .cabecalho{
+            padding: 10%;
+            z-index: 1;
+            
+        }
+        .cabecalho__menu{
+            justify-content: center;
+        }
+        .apresentacao{
+            flex-direction: column-reverse;
+            padding: 5%;
+        }
+        .apresentacao__conteudo{
+            width: auto;
+        }
+        .apresentacao__links_subtitulo{
+            font-size: 1.4rem;
+        }
+        .apresentacao__links__links{
+            font-size: 1.2rem;
+        }
+        .apresentacao__links__spotify{
+            font-size: 1.2rem;
+
+        }
+       
+    .apresentacao__conteudo__texto {
+        
+    }
+    .rodape {
+        margin-left: -10%; /* Ajuste o valor conforme necessário para alinhar com a borda */
+        margin-right: -10%;
+        padding: 15px;
+        color: palevioletred;
+        background-color: #4e0196;
+        text-align: center;
+        font-family: 'Righteous', sans-serif;
+        font-size: 1rem;
+    }
 }
